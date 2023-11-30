@@ -11,10 +11,10 @@ const Navbar = () => {
           <i class="fa fa-caret-down"></i>
         </button>
         <div className="dropdown-content">
-          <Link to="/">Home</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/login">Login</Link>
-          <a href="profiles.html">Connect</a>
+          <h2>The Plant Spot</h2>
+          <div>
+            <button onClick={signOut}>Sign Out</button>
+          </div>
         </div>
       </div>
     </div>
