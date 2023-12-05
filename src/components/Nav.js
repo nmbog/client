@@ -1,8 +1,17 @@
 import React from "react";
 import plantImage from "./img/plant-2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const onNotificationClick = (notification) =>
+    navigate(notification.cta.data.url);
+
+  const signOut = () => {
+    localStorage.removeItem("_id");
+    navigate("/");
+  };
   return (
     <div className="navbar">
       <div className="dropdown">
@@ -11,10 +20,7 @@ const Navbar = () => {
           <i class="fa fa-caret-down"></i>
         </button>
         <div className="dropdown-content">
-          <h2>The Plant Spot</h2>
-          <div>
-            <button onClick={signOut}>Sign Out</button>
-          </div>
+          <Link to={signOut}>sign out</Link>
         </div>
       </div>
     </div>
