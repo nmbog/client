@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import validateEmail from "./validate-email";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -7,6 +9,9 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  // Calls validateEmail function, which contains the call to microservice
+  validateEmail(email);
 
   const signUp = () => {
     fetch("http://localhost:4000/api/register", {
@@ -39,6 +44,7 @@ const Register = () => {
     setUsername("");
     setPassword("");
   };
+
   return (
     <main className="register">
       <h1 className="title">The Plant Spot</h1>
@@ -71,7 +77,7 @@ const Register = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerBtn">REGISTER</button>
+        <button className="registerBtn">register</button>
         <p>
           Already have an account? <Link to="/">Sign in</Link>
         </p>

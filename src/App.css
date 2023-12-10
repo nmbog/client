@@ -2,9 +2,13 @@
 body {
   font-family: 'Playfair Display', serif;
 }
+
+/* Header Styling */
 h1 {
   font-family: 'Pacifico', cursive;
 }
+
+
 /* Button Styling */
 button {
   font-family: 'Sacramento', cursive;
@@ -22,6 +26,16 @@ button a {
 }
 button a:hover {
   color: white;
+}
+.comment_container {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+.commentBtn {
+  height: 30px;
+  color: #98c377;
+  cursor: pointer;
 }
 /* Navigation bar styles */
 .navbar {
@@ -60,6 +74,7 @@ button a:hover {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  opacity: 0.75;
 }
 .dropdown-content a {
   float: none;
@@ -75,6 +90,10 @@ button a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+button.dropdown-content {
+  background-color: #f9f9f9;
+}
+
 /* Link Styles */
 a {
   text-decoration: none;
@@ -113,6 +132,12 @@ input.btn-input a {
 input.btn-input:hover {
   color: white;
 }
+
+/* Form Styles */
+.home, .login, .register, .replies {
+  margin-left: 5%;
+}
+
 
 /* Label Styles */
 label {

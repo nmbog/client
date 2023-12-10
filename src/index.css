@@ -75,6 +75,16 @@ button a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.comment_container {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+.commentBtn {
+  height: 30px;
+  color: #98c377;
+  cursor: pointer;
+}
 /* Link Styles */
 a {
   text-decoration: none;

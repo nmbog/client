@@ -20,7 +20,9 @@ const Navbar = () => {
           <i class="fa fa-caret-down"></i>
         </button>
         <div className="dropdown-content">
-          <Link to={signOut}>sign out</Link>
+          <a href="#" onClick={signOut}>
+            Sign Out
+          </a>
         </div>
       </div>
     </div>
